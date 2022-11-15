@@ -1,0 +1,35 @@
+@startuml
+left to right direction
+
+class Theater{
+book_list: list
+addB(book: str)
+removeb(book: str)
+}
+
+class SelectMovie{
+movies: list
+movie(self, movies: list)
+}
+
+class Time{
+times: list
+time(self)
+selecttime(self, times: list)
+}
+
+class Seats{
+seats(self)
+chooseseats(self)
+}
+
+class Tickets{
+tickets(self)
+}
+
+Theater -- Seats
+Theater -- Tickets
+Theater -- SelectMovie
+Theater -- Time
+
+@enduml
